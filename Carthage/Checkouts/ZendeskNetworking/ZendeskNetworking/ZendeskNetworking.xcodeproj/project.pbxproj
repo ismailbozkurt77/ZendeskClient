@@ -1,0 +1,435 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EC3E04261E1ED12100BD17DD /* ZendeskNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC3E041C1E1ED12100BD17DD /* ZendeskNetworking.framework */; };
+		EC3E042B1E1ED12100BD17DD /* ZendeskNetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3E042A1E1ED12100BD17DD /* ZendeskNetworkingTests.swift */; };
+		EC3E042D1E1ED12100BD17DD /* ZendeskNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = EC3E041F1E1ED12100BD17DD /* ZendeskNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EC3E04371E1ED67600BD17DD /* RestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3E04361E1ED67600BD17DD /* RestClient.swift */; };
+		EC3E04381E1ED67600BD17DD /* RestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3E04361E1ED67600BD17DD /* RestClient.swift */; };
+		EC3E043A1E1ED8E600BD17DD /* UrlSessionRestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3E04391E1ED8E600BD17DD /* UrlSessionRestClient.swift */; };
+		EC3E043B1E1ED8E600BD17DD /* UrlSessionRestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3E04391E1ED8E600BD17DD /* UrlSessionRestClient.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EC3E04271E1ED12100BD17DD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EC3E04131E1ED12100BD17DD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC3E041B1E1ED12100BD17DD;
+			remoteInfo = ZendeskNetworking;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EC3E041C1E1ED12100BD17DD /* ZendeskNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZendeskNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC3E041F1E1ED12100BD17DD /* ZendeskNetworking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZendeskNetworking.h; sourceTree = "<group>"; };
+		EC3E04201E1ED12100BD17DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC3E04251E1ED12100BD17DD /* ZendeskNetworkingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZendeskNetworkingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC3E042A1E1ED12100BD17DD /* ZendeskNetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZendeskNetworkingTests.swift; sourceTree = "<group>"; };
+		EC3E042C1E1ED12100BD17DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC3E04361E1ED67600BD17DD /* RestClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestClient.swift; sourceTree = "<group>"; };
+		EC3E04391E1ED8E600BD17DD /* UrlSessionRestClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlSessionRestClient.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EC3E04181E1ED12100BD17DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC3E04221E1ED12100BD17DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC3E04261E1ED12100BD17DD /* ZendeskNetworking.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EC3E04121E1ED12100BD17DD = {
+			isa = PBXGroup;
+			children = (
+				EC3E041E1E1ED12100BD17DD /* ZendeskNetworking */,
+				EC3E04291E1ED12100BD17DD /* ZendeskNetworkingTests */,
+				EC3E041D1E1ED12100BD17DD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EC3E041D1E1ED12100BD17DD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EC3E041C1E1ED12100BD17DD /* ZendeskNetworking.framework */,
+				EC3E04251E1ED12100BD17DD /* ZendeskNetworkingTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EC3E041E1E1ED12100BD17DD /* ZendeskNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				EC3E041F1E1ED12100BD17DD /* ZendeskNetworking.h */,
+				EC3E04201E1ED12100BD17DD /* Info.plist */,
+				EC3E04361E1ED67600BD17DD /* RestClient.swift */,
+				EC3E04391E1ED8E600BD17DD /* UrlSessionRestClient.swift */,
+			);
+			path = ZendeskNetworking;
+			sourceTree = "<group>";
+		};
+		EC3E04291E1ED12100BD17DD /* ZendeskNetworkingTests */ = {
+			isa = PBXGroup;
+			children = (
+				EC3E042A1E1ED12100BD17DD /* ZendeskNetworkingTests.swift */,
+				EC3E042C1E1ED12100BD17DD /* Info.plist */,
+			);
+			path = ZendeskNetworkingTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		EC3E04191E1ED12100BD17DD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC3E042D1E1ED12100BD17DD /* ZendeskNetworking.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		EC3E041B1E1ED12100BD17DD /* ZendeskNetworking */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC3E04301E1ED12100BD17DD /* Build configuration list for PBXNativeTarget "ZendeskNetworking" */;
+			buildPhases = (
+				EC3E04171E1ED12100BD17DD /* Sources */,
+				EC3E04181E1ED12100BD17DD /* Frameworks */,
+				EC3E04191E1ED12100BD17DD /* Headers */,
+				EC3E041A1E1ED12100BD17DD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZendeskNetworking;
+			productName = ZendeskNetworking;
+			productReference = EC3E041C1E1ED12100BD17DD /* ZendeskNetworking.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		EC3E04241E1ED12100BD17DD /* ZendeskNetworkingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC3E04331E1ED12100BD17DD /* Build configuration list for PBXNativeTarget "ZendeskNetworkingTests" */;
+			buildPhases = (
+				EC3E04211E1ED12100BD17DD /* Sources */,
+				EC3E04221E1ED12100BD17DD /* Frameworks */,
+				EC3E04231E1ED12100BD17DD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EC3E04281E1ED12100BD17DD /* PBXTargetDependency */,
+			);
+			name = ZendeskNetworkingTests;
+			productName = ZendeskNetworkingTests;
+			productReference = EC3E04251E1ED12100BD17DD /* ZendeskNetworkingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EC3E04131E1ED12100BD17DD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "Ismail Bozkurt";
+				TargetAttributes = {
+					EC3E041B1E1ED12100BD17DD = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = KPSV2KCFP6;
+						LastSwiftMigration = 0810;
+						ProvisioningStyle = Automatic;
+					};
+					EC3E04241E1ED12100BD17DD = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = KPSV2KCFP6;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = EC3E04161E1ED12100BD17DD /* Build configuration list for PBXProject "ZendeskNetworking" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = EC3E04121E1ED12100BD17DD;
+			productRefGroup = EC3E041D1E1ED12100BD17DD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EC3E041B1E1ED12100BD17DD /* ZendeskNetworking */,
+				EC3E04241E1ED12100BD17DD /* ZendeskNetworkingTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EC3E041A1E1ED12100BD17DD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC3E04231E1ED12100BD17DD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EC3E04171E1ED12100BD17DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC3E04371E1ED67600BD17DD /* RestClient.swift in Sources */,
+				EC3E043A1E1ED8E600BD17DD /* UrlSessionRestClient.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC3E04211E1ED12100BD17DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC3E043B1E1ED8E600BD17DD /* UrlSessionRestClient.swift in Sources */,
+				EC3E04381E1ED67600BD17DD /* RestClient.swift in Sources */,
+				EC3E042B1E1ED12100BD17DD /* ZendeskNetworkingTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EC3E04281E1ED12100BD17DD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EC3E041B1E1ED12100BD17DD /* ZendeskNetworking */;
+			targetProxy = EC3E04271E1ED12100BD17DD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		EC3E042E1E1ED12100BD17DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		EC3E042F1E1ED12100BD17DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		EC3E04311E1ED12100BD17DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = KPSV2KCFP6;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = ZendeskNetworking/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ismailbozkurt.ZendeskNetworking;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		EC3E04321E1ED12100BD17DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = KPSV2KCFP6;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = ZendeskNetworking/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ismailbozkurt.ZendeskNetworking;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		EC3E04341E1ED12100BD17DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = KPSV2KCFP6;
+				INFOPLIST_FILE = ZendeskNetworkingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ismailbozkurt.ZendeskNetworkingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		EC3E04351E1ED12100BD17DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = KPSV2KCFP6;
+				INFOPLIST_FILE = ZendeskNetworkingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ismailbozkurt.ZendeskNetworkingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EC3E04161E1ED12100BD17DD /* Build configuration list for PBXProject "ZendeskNetworking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC3E042E1E1ED12100BD17DD /* Debug */,
+				EC3E042F1E1ED12100BD17DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC3E04301E1ED12100BD17DD /* Build configuration list for PBXNativeTarget "ZendeskNetworking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC3E04311E1ED12100BD17DD /* Debug */,
+				EC3E04321E1ED12100BD17DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EC3E04331E1ED12100BD17DD /* Build configuration list for PBXNativeTarget "ZendeskNetworkingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC3E04341E1ED12100BD17DD /* Debug */,
+				EC3E04351E1ED12100BD17DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EC3E04131E1ED12100BD17DD /* Project object */;
+}

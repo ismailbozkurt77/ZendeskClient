@@ -4,15 +4,26 @@
 //
 
 #import "CLP_TicketTableViewController.h"
+#import <ZendeskNetworking/ZendeskNetworking-Swift.h>
 
 @interface CLP_TicketTableViewController ()
 
 @property (strong, nonatomic) NSArray *dataArray;
 @property (strong, nonatomic) NSString *serverURL;
+@property (strong, nonatomic) UrlSessionRestClient *restClient;
 
 @end
 
 @implementation CLP_TicketTableViewController
+
+- (UrlSessionRestClient *)restClient
+{
+    if (!_restClient)
+    {
+        _restClient = [[UrlSessionRestClient alloc] init];
+    }
+    return _restClient;
+}
 
 - (NSString *)serverURL
 {
@@ -24,20 +35,9 @@
 {
     self = [super initWithStyle:style];
     if (self) {
-        // Custom initialization
+        
     }
     return self;
-}
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -79,10 +79,25 @@
 - (void)fetchTicketsFromServer
 {
     NSURL *url = [[NSURL alloc]initWithString:self.serverURL];
-    NSMutableURLRequest *request = [[NSMutableURLRequest alloc]initWithURL:url];
     
-    NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
-    [connection start];
+    
+//    NSMutableURLRequest *request = [[NSMutableURLRequest alloc]initWithURL:url];
+//    
+//    NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+//    [connection start];
+    
+    
+    [self.restClient GETWithUrl:url headers:nil completion:^(NSData *data, NSURLResponse *response, NSError *error) {
+        if (error == nil)
+        {
+            NSError *parseError;
+            NSDictionary *ticketsData = [NSJSONSerialization JSONObjectWithData:data options:0 error:&parseError];
+            self.dataArray = [ticketsData objectForKey:@"tickets"];
+            
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"ZendeskTicketDataRefreshed" object:self];
+        }
+    }];
+    
 }
 
 
