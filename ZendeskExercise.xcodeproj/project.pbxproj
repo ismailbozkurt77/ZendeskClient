@@ -43,6 +43,7 @@
 		EC80277D1E210168008D0F8E /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC80277C1E210168008D0F8E /* ObjectMapper.framework */; };
 		EC80277E1E210178008D0F8E /* ObjectMapper.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EC80277C1E210168008D0F8E /* ObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		ECB135691E215E910062AC33 /* TicketMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB135681E215E910062AC33 /* TicketMapperTests.swift */; };
+		ECB1356D1E2172880062AC33 /* TicketCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB1356C1E2172880062AC33 /* TicketCell.swift */; };
 		ECB2082D1E2107D700BEEFD0 /* TicketDefaultService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB2082B1E2107D700BEEFD0 /* TicketDefaultService.swift */; };
 		ECB2082E1E2107D700BEEFD0 /* TicketDefaultService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB2082B1E2107D700BEEFD0 /* TicketDefaultService.swift */; };
 		ECB2082F1E2107D700BEEFD0 /* TicketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB2082C1E2107D700BEEFD0 /* TicketService.swift */; };
@@ -106,6 +107,7 @@
 		EC7162031E211147001BCD06 /* EndPoints.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = EndPoints.plist; sourceTree = "<group>"; };
 		EC80277C1E210168008D0F8E /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
 		ECB135681E215E910062AC33 /* TicketMapperTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketMapperTests.swift; sourceTree = "<group>"; };
+		ECB1356C1E2172880062AC33 /* TicketCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketCell.swift; sourceTree = "<group>"; };
 		ECB2082B1E2107D700BEEFD0 /* TicketDefaultService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketDefaultService.swift; sourceTree = "<group>"; };
 		ECB2082C1E2107D700BEEFD0 /* TicketService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -258,6 +260,7 @@
 			isa = PBXGroup;
 			children = (
 				EC469B201E21590000195B51 /* TicketViewModel.swift */,
+				ECB1356C1E2172880062AC33 /* TicketCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 		EC80277B1E20FF58008D0F8E /* TicketList */ = {
 			isa = PBXGroup;
 			children = (
+				EC469B0D1E21542A00195B51 /* View */,
 				EC469B061E21534100195B51 /* Presenter */,
 				EC469AFE1E214EAA00195B51 /* Interactor */,
 				EC469B1B1E21582000195B51 /* Mapper */,
@@ -447,6 +451,7 @@
 				ECB2082D1E2107D700BEEFD0 /* TicketDefaultService.swift in Sources */,
 				8327016C19B6087400AF50E7 /* CLP_MainViewController.m in Sources */,
 				EC469AF71E211A3300195B51 /* Ticket.swift in Sources */,
+				ECB1356D1E2172880062AC33 /* TicketCell.swift in Sources */,
 				EC469B1D1E21589700195B51 /* TicketMapper.swift in Sources */,
 				8327014C19B607D500AF50E7 /* CLPAppDelegate.m in Sources */,
 				ECB2082F1E2107D700BEEFD0 /* TicketService.swift in Sources */,
