@@ -15,6 +15,9 @@
 		ECAB6F6F1E203BB60049D009 /* RequestHeaderSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAB6F6E1E203BB60049D009 /* RequestHeaderSerializer.swift */; };
 		ECAB6F701E203BB60049D009 /* RequestHeaderSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAB6F6E1E203BB60049D009 /* RequestHeaderSerializer.swift */; };
 		ECAB6F721E203BC90049D009 /* RequestHeaderSerializerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAB6F711E203BC90049D009 /* RequestHeaderSerializerTests.swift */; };
+		ECD9E2A31E204F280033473B /* ResponseSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD9E2A21E204F280033473B /* ResponseSerializer.swift */; };
+		ECD9E2A41E204F280033473B /* ResponseSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD9E2A21E204F280033473B /* ResponseSerializer.swift */; };
+		ECD9E2A81E2063C20033473B /* ResponseSerializerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD9E2A71E2063C20033473B /* ResponseSerializerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +41,8 @@
 		ECAB6F6A1E203B560049D009 /* UrlSessionRestClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlSessionRestClient.swift; sourceTree = "<group>"; };
 		ECAB6F6E1E203BB60049D009 /* RequestHeaderSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestHeaderSerializer.swift; sourceTree = "<group>"; };
 		ECAB6F711E203BC90049D009 /* RequestHeaderSerializerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestHeaderSerializerTests.swift; sourceTree = "<group>"; };
+		ECD9E2A21E204F280033473B /* ResponseSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseSerializer.swift; sourceTree = "<group>"; };
+		ECD9E2A71E2063C20033473B /* ResponseSerializerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseSerializerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +99,7 @@
 				EC3E042C1E1ED12100BD17DD /* Info.plist */,
 				EC3E042A1E1ED12100BD17DD /* ZendeskNetworkingTests.swift */,
 				ECAB6F711E203BC90049D009 /* RequestHeaderSerializerTests.swift */,
+				ECD9E2A71E2063C20033473B /* ResponseSerializerTests.swift */,
 			);
 			path = ZendeskNetworkingTests;
 			sourceTree = "<group>";
@@ -111,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				ECAB6F6E1E203BB60049D009 /* RequestHeaderSerializer.swift */,
+				ECD9E2A21E204F280033473B /* ResponseSerializer.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -228,6 +235,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECD9E2A31E204F280033473B /* ResponseSerializer.swift in Sources */,
 				ECAB6F6F1E203BB60049D009 /* RequestHeaderSerializer.swift in Sources */,
 				ECAB6F6B1E203B560049D009 /* RestClient.swift in Sources */,
 				ECAB6F6C1E203B560049D009 /* UrlSessionRestClient.swift in Sources */,
@@ -238,6 +246,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECD9E2A81E2063C20033473B /* ResponseSerializerTests.swift in Sources */,
+				ECD9E2A41E204F280033473B /* ResponseSerializer.swift in Sources */,
 				EC3E042B1E1ED12100BD17DD /* ZendeskNetworkingTests.swift in Sources */,
 				ECAB6F701E203BB60049D009 /* RequestHeaderSerializer.swift in Sources */,
 				ECAB6F721E203BC90049D009 /* RequestHeaderSerializerTests.swift in Sources */,

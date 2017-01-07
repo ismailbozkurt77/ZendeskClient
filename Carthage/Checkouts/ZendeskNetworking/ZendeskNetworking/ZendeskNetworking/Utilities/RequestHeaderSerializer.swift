@@ -6,7 +6,8 @@
 //  Copyright © 2017 Ismail Bozkurt. All rights reserved.
 //
 
-import UIKit
+import Foundation
+
 
 public class RequestHeaderSerializer: NSObject {
     lazy public var headers = [String: String]()

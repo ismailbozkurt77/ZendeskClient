@@ -6,7 +6,8 @@
 //  Copyright © 2017 Ismail Bozkurt. All rights reserved.
 //
 
-import UIKit
+import Foundation
+
 
 public class UrlSessionRestClient: NSObject, RestClient {
     let defaultSession = URLSession(configuration: URLSessionConfiguration.default)
@@ -23,6 +24,8 @@ public class UrlSessionRestClient: NSObject, RestClient {
         }
         
         let dataTask = defaultSession.dataTask(with: request, completionHandler: { (data: Data?, response: URLResponse?, error: Error?) in
+            var error = error
+            ResponseSerializer().validate(response: response, data: data, error: &error)
             completion(data, response, error)
         })
         dataTask.resume()
