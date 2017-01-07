@@ -23,6 +23,10 @@ class Ticket: NSObject, Mappable {
         
     }
     
+    override init() {
+        // For mocking purpose only
+    }
+    
     func mapping(map: Map) {
         status              <- map["status"]
         ticketDescription   <- map["description"]
