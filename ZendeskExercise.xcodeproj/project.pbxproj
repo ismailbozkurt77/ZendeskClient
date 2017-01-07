@@ -32,6 +32,12 @@
 		EC469B011E214F1000195B51 /* TicketListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC469AFF1E214F1000195B51 /* TicketListInteractor.swift */; };
 		EC469B031E214FF300195B51 /* TicketListDefaultInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC469B021E214FF300195B51 /* TicketListDefaultInteractor.swift */; };
 		EC469B041E214FF300195B51 /* TicketListDefaultInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC469B021E214FF300195B51 /* TicketListDefaultInteractor.swift */; };
+		EC469B101E21546A00195B51 /* TicketListEventHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC469B0E1E21546A00195B51 /* TicketListEventHandler.swift */; };
+		EC469B111E21546A00195B51 /* TicketListEventHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC469B0E1E21546A00195B51 /* TicketListEventHandler.swift */; };
+		EC469B121E21546A00195B51 /* TicketListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC469B0F1E21546A00195B51 /* TicketListPresenter.swift */; };
+		EC469B131E21546A00195B51 /* TicketListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC469B0F1E21546A00195B51 /* TicketListPresenter.swift */; };
+		EC469B151E2154B800195B51 /* TicketListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC469B141E2154B800195B51 /* TicketListView.swift */; };
+		EC469B161E2154B800195B51 /* TicketListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC469B141E2154B800195B51 /* TicketListView.swift */; };
 		EC469B1D1E21589700195B51 /* TicketMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC469B1C1E21589700195B51 /* TicketMapper.swift */; };
 		EC469B1E1E21589700195B51 /* TicketMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC469B1C1E21589700195B51 /* TicketMapper.swift */; };
 		EC469B211E21590000195B51 /* TicketViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC469B201E21590000195B51 /* TicketViewModel.swift */; };
@@ -101,6 +107,9 @@
 		EC469AFC1E211E1200195B51 /* TicketDefaultServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketDefaultServiceTests.swift; sourceTree = "<group>"; };
 		EC469AFF1E214F1000195B51 /* TicketListInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketListInteractor.swift; sourceTree = "<group>"; };
 		EC469B021E214FF300195B51 /* TicketListDefaultInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketListDefaultInteractor.swift; sourceTree = "<group>"; };
+		EC469B0E1E21546A00195B51 /* TicketListEventHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketListEventHandler.swift; sourceTree = "<group>"; };
+		EC469B0F1E21546A00195B51 /* TicketListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketListPresenter.swift; sourceTree = "<group>"; };
+		EC469B141E2154B800195B51 /* TicketListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketListView.swift; sourceTree = "<group>"; };
 		EC469B1C1E21589700195B51 /* TicketMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketMapper.swift; sourceTree = "<group>"; };
 		EC469B201E21590000195B51 /* TicketViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketViewModel.swift; sourceTree = "<group>"; };
 		EC7162021E211147001BCD06 /* EndPointFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPointFactory.swift; sourceTree = "<group>"; };
@@ -256,9 +265,19 @@
 			path = Interactor;
 			sourceTree = "<group>";
 		};
+		EC469B061E21534100195B51 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				EC469B0E1E21546A00195B51 /* TicketListEventHandler.swift */,
+				EC469B0F1E21546A00195B51 /* TicketListPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		EC469B0D1E21542A00195B51 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EC469B141E2154B800195B51 /* TicketListView.swift */,
 				EC469B201E21590000195B51 /* TicketViewModel.swift */,
 				ECB1356C1E2172880062AC33 /* TicketCell.swift */,
 			);
@@ -452,11 +471,14 @@
 				8327016C19B6087400AF50E7 /* CLP_MainViewController.m in Sources */,
 				EC469AF71E211A3300195B51 /* Ticket.swift in Sources */,
 				ECB1356D1E2172880062AC33 /* TicketCell.swift in Sources */,
+				EC469B151E2154B800195B51 /* TicketListView.swift in Sources */,
 				EC469B1D1E21589700195B51 /* TicketMapper.swift in Sources */,
 				8327014C19B607D500AF50E7 /* CLPAppDelegate.m in Sources */,
 				ECB2082F1E2107D700BEEFD0 /* TicketService.swift in Sources */,
 				8327014819B607D500AF50E7 /* main.m in Sources */,
+				EC469B121E21546A00195B51 /* TicketListPresenter.swift in Sources */,
 				EC469B001E214F1000195B51 /* TicketListInteractor.swift in Sources */,
+				EC469B101E21546A00195B51 /* TicketListEventHandler.swift in Sources */,
 				8327016F19B60AF700AF50E7 /* CLP_TicketTableViewController.m in Sources */,
 				EC469B211E21590000195B51 /* TicketViewModel.swift in Sources */,
 			);
@@ -469,13 +491,16 @@
 				ECB208301E2107D700BEEFD0 /* TicketService.swift in Sources */,
 				EC469AFD1E211E1200195B51 /* TicketDefaultServiceTests.swift in Sources */,
 				EC469B1E1E21589700195B51 /* TicketMapper.swift in Sources */,
+				EC469B131E21546A00195B51 /* TicketListPresenter.swift in Sources */,
 				ECB135691E215E910062AC33 /* TicketMapperTests.swift in Sources */,
 				EC469B011E214F1000195B51 /* TicketListInteractor.swift in Sources */,
 				EC7162061E21118B001BCD06 /* EndPointFactory.swift in Sources */,
 				EC469B041E214FF300195B51 /* TicketListDefaultInteractor.swift in Sources */,
+				EC469B161E2154B800195B51 /* TicketListView.swift in Sources */,
 				EC469AF81E211A3300195B51 /* Ticket.swift in Sources */,
 				EC2A13041E210F6B007143B9 /* EndPointFactoryTests.swift in Sources */,
 				EC469B221E21590000195B51 /* TicketViewModel.swift in Sources */,
+				EC469B111E21546A00195B51 /* TicketListEventHandler.swift in Sources */,
 				ECB2082E1E2107D700BEEFD0 /* TicketDefaultService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

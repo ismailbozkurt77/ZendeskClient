@@ -10,4 +10,5 @@ import UIKit
 
 protocol TicketListInteractor {
     func fetchTickets(completion: @escaping TicketServiceFetchTicketCompletion)
+    func cancelFetchTicketCalls()
 }
