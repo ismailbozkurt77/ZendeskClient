@@ -23,6 +23,8 @@
 		8327016F19B60AF700AF50E7 /* CLP_TicketTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8327016E19B60AF700AF50E7 /* CLP_TicketTableViewController.m */; };
 		EC3FB4D41E1F0FC3006D611E /* ZendeskNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC3FB4D31E1F0FC3006D611E /* ZendeskNetworking.framework */; };
 		EC3FB4D91E1F105D006D611E /* ZendeskNetworking.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EC3FB4D31E1F0FC3006D611E /* ZendeskNetworking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EC80277D1E210168008D0F8E /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC80277C1E210168008D0F8E /* ObjectMapper.framework */; };
+		EC80277E1E210178008D0F8E /* ObjectMapper.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EC80277C1E210168008D0F8E /* ObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				EC80277E1E210178008D0F8E /* ObjectMapper.framework in CopyFiles */,
 				EC3FB4D91E1F105D006D611E /* ZendeskNetworking.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -71,6 +74,7 @@
 		8327016E19B60AF700AF50E7 /* CLP_TicketTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLP_TicketTableViewController.m; sourceTree = "<group>"; };
 		EC3FB4D31E1F0FC3006D611E /* ZendeskNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZendeskNetworking.framework; path = Carthage/Build/iOS/ZendeskNetworking.framework; sourceTree = "<group>"; };
 		EC3FB4D51E1F100A006D611E /* ZendeskExercise-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZendeskExercise-Bridging-Header.h"; sourceTree = "<group>"; };
+		EC80277C1E210168008D0F8E /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,7 @@
 				8327014019B607D500AF50E7 /* UIKit.framework in Frameworks */,
 				8327013C19B607D500AF50E7 /* Foundation.framework in Frameworks */,
 				EC3FB4D41E1F0FC3006D611E /* ZendeskNetworking.framework in Frameworks */,
+				EC80277D1E210168008D0F8E /* ObjectMapper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,7 +96,9 @@
 			files = (
 				8327015519B607D500AF50E7 /* XCTest.framework in Frameworks */,
 				8327015719B607D500AF50E7 /* UIKit.framework in Frameworks */,
+				EC2A13071E2110E8007143B9 /* ObjectMapper.framework in Frameworks */,
 				8327015619B607D500AF50E7 /* Foundation.framework in Frameworks */,
+				EC2A13061E2110E5007143B9 /* ZendeskNetworking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,6 +127,7 @@
 		8327013A19B607D500AF50E7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EC80277C1E210168008D0F8E /* ObjectMapper.framework */,
 				EC3FB4D31E1F0FC3006D611E /* ZendeskNetworking.framework */,
 				8327013B19B607D500AF50E7 /* Foundation.framework */,
 				8327013D19B607D500AF50E7 /* CoreGraphics.framework */,
@@ -228,6 +236,7 @@
 						LastSwiftMigration = 0810;
 					};
 					8327015219B607D500AF50E7 = {
+						LastSwiftMigration = 0810;
 						TestTargetID = 8327013719B607D500AF50E7;
 					};
 				};
@@ -443,11 +452,14 @@
 		8327016819B607D500AF50E7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ZendeskExercise.app/ZendeskExercise";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ZendeskExercise/ZendeskExercise-Prefix.pch";
@@ -456,8 +468,12 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "ZendeskExerciseTests/ZendeskExerciseTests-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ibm.Zendesktopher.lapat.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ZendeskExercise/ZendeskExerciseTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -466,17 +482,23 @@
 		8327016919B607D500AF50E7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ZendeskExercise.app/ZendeskExercise";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ZendeskExercise/ZendeskExercise-Prefix.pch";
 				INFOPLIST_FILE = "ZendeskExerciseTests/ZendeskExerciseTests-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ibm.Zendesktopher.lapat.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ZendeskExercise/ZendeskExerciseTests-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
