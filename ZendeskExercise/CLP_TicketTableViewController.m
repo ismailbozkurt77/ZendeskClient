@@ -57,37 +57,13 @@
     return [self.dataArray count];
 }
 
-
-- (void)connection:(NSURLConnection *)connection didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge {
-    if ([challenge previousFailureCount] == 0) {
-        NSURLCredential *newCredential = [NSURLCredential credentialWithUser:@"acooke+techtest@zendesk.com"
-                                                                    password:@"mobile"
-                                                                 persistence:NSURLCredentialPersistenceForSession];
-        [[challenge sender] useCredential:newCredential forAuthenticationChallenge:challenge];
-    }
-}
-
-- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
-    NSError *error;
-    NSDictionary *ticketsData = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
-    self.dataArray = [ticketsData objectForKey:@"tickets"];
-    
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"ZendeskTicketDataRefreshed" object:self];
-}
-
-
 - (void)fetchTicketsFromServer
 {
     NSURL *url = [[NSURL alloc]initWithString:self.serverURL];
-    
-    
-//    NSMutableURLRequest *request = [[NSMutableURLRequest alloc]initWithURL:url];
-//    
-//    NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
-//    [connection start];
-    
-    
-    [self.restClient GETWithUrl:url headers:nil completion:^(NSData *data, NSURLResponse *response, NSError *error) {
+
+    NSDictionary<NSString *, NSString *> *headers
+    = [self buildAuthorizationHeaderFieldWithUsername:@"acooke+techtest@zendesk.com" password:@"mobile"];
+    [self.restClient GETWithUrl:url headers:headers completion:^(NSData *data, NSURLResponse *response, NSError *error) {
         if (error == nil)
         {
             NSError *parseError;
@@ -95,9 +71,18 @@
             self.dataArray = [ticketsData objectForKey:@"tickets"];
             
             [[NSNotificationCenter defaultCenter] postNotificationName:@"ZendeskTicketDataRefreshed" object:self];
+
         }
     }];
     
+}
+
+- (NSDictionary<NSString *, NSString *> *)buildAuthorizationHeaderFieldWithUsername:(NSString *)username
+                                                                           password:(NSString *)password
+{
+    RequestHeaderSerializer *headerSerializer = [RequestHeaderSerializer new];
+    [headerSerializer setAutherizationHeaderWithUsername:@"acooke+techtest@zendesk.com" password:@"mobile"];
+    return headerSerializer.headers;
 }
 
 
