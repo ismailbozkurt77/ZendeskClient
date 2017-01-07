@@ -39,6 +39,7 @@
 		EC469B151E2154B800195B51 /* TicketListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC469B141E2154B800195B51 /* TicketListView.swift */; };
 		EC469B161E2154B800195B51 /* TicketListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC469B141E2154B800195B51 /* TicketListView.swift */; };
 		EC469B181E21551900195B51 /* TicketListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC469B171E21551900195B51 /* TicketListTableViewController.swift */; };
+		EC469B1A1E2155F800195B51 /* TicketListModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC469B191E2155F800195B51 /* TicketListModuleBuilder.swift */; };
 		EC469B1D1E21589700195B51 /* TicketMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC469B1C1E21589700195B51 /* TicketMapper.swift */; };
 		EC469B1E1E21589700195B51 /* TicketMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC469B1C1E21589700195B51 /* TicketMapper.swift */; };
 		EC469B211E21590000195B51 /* TicketViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC469B201E21590000195B51 /* TicketViewModel.swift */; };
@@ -112,6 +113,8 @@
 		EC469B0E1E21546A00195B51 /* TicketListEventHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketListEventHandler.swift; sourceTree = "<group>"; };
 		EC469B0F1E21546A00195B51 /* TicketListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketListPresenter.swift; sourceTree = "<group>"; };
 		EC469B141E2154B800195B51 /* TicketListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketListView.swift; sourceTree = "<group>"; };
+		EC469B171E21551900195B51 /* TicketListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketListTableViewController.swift; sourceTree = "<group>"; };
+		EC469B191E2155F800195B51 /* TicketListModuleBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketListModuleBuilder.swift; sourceTree = "<group>"; };
 		EC469B1C1E21589700195B51 /* TicketMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketMapper.swift; sourceTree = "<group>"; };
 		EC469B201E21590000195B51 /* TicketViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketViewModel.swift; sourceTree = "<group>"; };
 		EC7162021E211147001BCD06 /* EndPointFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPointFactory.swift; sourceTree = "<group>"; };
@@ -316,6 +319,7 @@
 		EC80277B1E20FF58008D0F8E /* TicketList */ = {
 			isa = PBXGroup;
 			children = (
+				EC469B191E2155F800195B51 /* TicketListModuleBuilder.swift */,
 				ECB1356A1E2166E00062AC33 /* TicketList.storyboard */,
 				EC469B0D1E21542A00195B51 /* View */,
 				EC469B061E21534100195B51 /* Presenter */,
