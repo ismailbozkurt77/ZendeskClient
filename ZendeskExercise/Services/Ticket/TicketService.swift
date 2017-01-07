@@ -12,4 +12,6 @@ typealias TicketServiceFetchTicketCompletion = ([Ticket]?, Error?) -> Void
 
 protocol TicketService {
     
+    @discardableResult
+    func fetchTickets(completion: @escaping TicketServiceFetchTicketCompletion) -> URLSessionTask
 }

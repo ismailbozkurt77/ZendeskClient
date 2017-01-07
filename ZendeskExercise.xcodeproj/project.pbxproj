@@ -28,6 +28,10 @@
 		EC469AF71E211A3300195B51 /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC469AF61E211A3300195B51 /* Ticket.swift */; };
 		EC469AF81E211A3300195B51 /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC469AF61E211A3300195B51 /* Ticket.swift */; };
 		EC469AFD1E211E1200195B51 /* TicketDefaultServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC469AFC1E211E1200195B51 /* TicketDefaultServiceTests.swift */; };
+		EC469B001E214F1000195B51 /* TicketListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC469AFF1E214F1000195B51 /* TicketListInteractor.swift */; };
+		EC469B011E214F1000195B51 /* TicketListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC469AFF1E214F1000195B51 /* TicketListInteractor.swift */; };
+		EC469B031E214FF300195B51 /* TicketListDefaultInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC469B021E214FF300195B51 /* TicketListDefaultInteractor.swift */; };
+		EC469B041E214FF300195B51 /* TicketListDefaultInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC469B021E214FF300195B51 /* TicketListDefaultInteractor.swift */; };
 		EC7162041E211147001BCD06 /* EndPointFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7162021E211147001BCD06 /* EndPointFactory.swift */; };
 		EC7162051E211147001BCD06 /* EndPoints.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC7162031E211147001BCD06 /* EndPoints.plist */; };
 		EC7162061E21118B001BCD06 /* EndPointFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7162021E211147001BCD06 /* EndPointFactory.swift */; };
@@ -89,6 +93,8 @@
 		EC3FB4D51E1F100A006D611E /* ZendeskExercise-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZendeskExercise-Bridging-Header.h"; sourceTree = "<group>"; };
 		EC469AF61E211A3300195B51 /* Ticket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ticket.swift; sourceTree = "<group>"; };
 		EC469AFC1E211E1200195B51 /* TicketDefaultServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketDefaultServiceTests.swift; sourceTree = "<group>"; };
+		EC469AFF1E214F1000195B51 /* TicketListInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketListInteractor.swift; sourceTree = "<group>"; };
+		EC469B021E214FF300195B51 /* TicketListDefaultInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketListDefaultInteractor.swift; sourceTree = "<group>"; };
 		EC7162021E211147001BCD06 /* EndPointFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPointFactory.swift; sourceTree = "<group>"; };
 		EC7162031E211147001BCD06 /* EndPoints.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = EndPoints.plist; sourceTree = "<group>"; };
 		EC80277C1E210168008D0F8E /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
@@ -167,6 +173,7 @@
 				8327016D19B60AF700AF50E7 /* CLP_TicketTableViewController.h */,
 				8327016E19B60AF700AF50E7 /* CLP_TicketTableViewController.m */,
 				EC3FB4D51E1F100A006D611E /* ZendeskExercise-Bridging-Header.h */,
+				EC80277A1E20FF22008D0F8E /* Modules */,
 				ECB208291E2107D700BEEFD0 /* Services */,
 				EC80278F1E2103C0008D0F8E /* Models */,
 				8327014219B607D500AF50E7 /* Supporting Files */,
@@ -229,6 +236,15 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		EC469AFE1E214EAA00195B51 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				EC469AFF1E214F1000195B51 /* TicketListInteractor.swift */,
+				EC469B021E214FF300195B51 /* TicketListDefaultInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
 		EC7162011E211147001BCD06 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -236,6 +252,23 @@
 				EC7162031E211147001BCD06 /* EndPoints.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		EC80277A1E20FF22008D0F8E /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				EC80277B1E20FF58008D0F8E /* TicketList */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		EC80277B1E20FF58008D0F8E /* TicketList */ = {
+			isa = PBXGroup;
+			children = (
+				EC469B061E21534100195B51 /* Presenter */,
+				EC469AFE1E214EAA00195B51 /* Interactor */,
+			);
+			path = TicketList;
 			sourceTree = "<group>";
 		};
 		EC80278F1E2103C0008D0F8E /* Models */ = {
@@ -367,6 +400,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC469B031E214FF300195B51 /* TicketListDefaultInteractor.swift in Sources */,
 				EC7162041E211147001BCD06 /* EndPointFactory.swift in Sources */,
 				ECB2082D1E2107D700BEEFD0 /* TicketDefaultService.swift in Sources */,
 				8327016C19B6087400AF50E7 /* CLP_MainViewController.m in Sources */,
@@ -374,6 +408,7 @@
 				8327014C19B607D500AF50E7 /* CLPAppDelegate.m in Sources */,
 				ECB2082F1E2107D700BEEFD0 /* TicketService.swift in Sources */,
 				8327014819B607D500AF50E7 /* main.m in Sources */,
+				EC469B001E214F1000195B51 /* TicketListInteractor.swift in Sources */,
 				8327016F19B60AF700AF50E7 /* CLP_TicketTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -384,7 +419,9 @@
 			files = (
 				ECB208301E2107D700BEEFD0 /* TicketService.swift in Sources */,
 				EC469AFD1E211E1200195B51 /* TicketDefaultServiceTests.swift in Sources */,
+				EC469B011E214F1000195B51 /* TicketListInteractor.swift in Sources */,
 				EC7162061E21118B001BCD06 /* EndPointFactory.swift in Sources */,
+				EC469B041E214FF300195B51 /* TicketListDefaultInteractor.swift in Sources */,
 				EC469AF81E211A3300195B51 /* Ticket.swift in Sources */,
 				EC2A13041E210F6B007143B9 /* EndPointFactoryTests.swift in Sources */,
 				ECB2082E1E2107D700BEEFD0 /* TicketDefaultService.swift in Sources */,
