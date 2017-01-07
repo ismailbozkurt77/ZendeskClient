@@ -12,13 +12,18 @@ import ZendeskNetworking
 import ObjectMapper
 
 
-let kTicketDefaultServicefetchTicketPath = "/views/39551161/tickets.json"
+private let kTicketDefaultServicefetchTicketPath = "/views/39551161/tickets.json"
 
-let kTicketDefaultServiceFetchResponseTicketKey = "tickets"
+private let kTicketDefaultServiceFetchResponseTicketKey = "tickets"
 
-let kTicketDefaultServiceErrorDomain = "com.ismail.bozkurt.zendesk.client.ticket.service.error"
-let kTicketDefaultServiceJSONSerializationErrorCode = -10000
-let kTicketDefaultServiceInvalidJSONContentErrorCode = -10001
+private let kTicketDefaultServiceErrorDomain = "com.ismail.bozkurt.zendesk.client.ticket.service.error"
+private let kTicketDefaultServiceJSONSerializationErrorCode = -10000
+private let kTicketDefaultServiceInvalidJSONContentErrorCode = -10001
+
+// TODO: remove credentials from code
+private let kTicketDefaultServiceCredentialsUsername = "acooke+techtest@zendesk.com"
+private let kTicketDefaultServiceCredentialsPassword = "mobile"
+
 
 class TicketDefaultService: NSObject, TicketService {
     
@@ -95,8 +100,8 @@ class TicketDefaultService: NSObject, TicketService {
     
     fileprivate func buildFetchTicketHeaders() -> [String: String] {
         let requestHeaderSerializer = RequestHeaderSerializer()
-        requestHeaderSerializer.setAutherizationHeader(username: "acooke+techtest@zendesk.com",
-                                                       password: "mobile")
+        requestHeaderSerializer.setAutherizationHeader(username: kTicketDefaultServiceCredentialsUsername,
+                                                       password: kTicketDefaultServiceCredentialsPassword)
         return requestHeaderSerializer.headers
     }
     
