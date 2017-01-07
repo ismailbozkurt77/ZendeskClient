@@ -9,9 +9,15 @@
 import UIKit
 import ObjectMapper
 
+enum TicketStatus: String {
+    case new = "new"
+    case open = "open"
+    case pending = "pending"
+}
+
 
 class Ticket: NSObject, Mappable {
-    var status: String?
+    var status: TicketStatus?
     var ticketDescription: String?
     var subject: String?
     var ticketId: Int?
@@ -28,9 +34,9 @@ class Ticket: NSObject, Mappable {
     }
     
     func mapping(map: Map) {
-        status              <- map["status"]
-        ticketDescription   <- map["description"]
         subject             <- map["subject"]
+        ticketDescription   <- map["description"]
+        status              <- (map["status"], EnumTransform<TicketStatus>())
         ticketId            <- map["id"]
     }
 }

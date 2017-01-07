@@ -29,4 +29,11 @@ class TicketMapper {
         
         return viewModel
     }
+    
+    func ticketViewModelArray(models: [Ticket]) -> [TicketViewModel] {
+        let viewModels = models.flatMap {
+            self.ticketViewModel(model: $0)
+        }
+        return viewModels
+    }
 }

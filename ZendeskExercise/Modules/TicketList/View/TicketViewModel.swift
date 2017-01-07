@@ -12,5 +12,5 @@ class TicketViewModel: NSObject {
     var subject: String?
     var ticketId: String?
     var ticketDescription: String?
-    var status: String?
+    var status: TicketStatus?
 }

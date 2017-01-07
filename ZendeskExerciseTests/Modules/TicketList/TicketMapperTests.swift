@@ -18,8 +18,8 @@ class TicketMapperTests: XCTestCase {
         self.mapper = TicketMapper()
         
         self.ticketModelMock = Ticket()
-        self.ticketModelMock.status = "New"
-        self.ticketModelMock.ticketDescription = "Zeneks service ticket"
+        self.ticketModelMock.status = TicketStatus.open
+        self.ticketModelMock.ticketDescription = "Zendesk service ticket"
         self.ticketModelMock.ticketId = 66666
         self.ticketModelMock.subject = "this is a test"
         
