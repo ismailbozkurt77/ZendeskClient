@@ -54,30 +54,31 @@ class TicketDefaultService: NSObject, TicketService {
     
     private func handleResponse(data: Data?, response: URLResponse?, error: Error?, completion: @escaping  TicketServiceFetchTicketCompletion) {
         DispatchQueue.global().async {
-            if error == nil {
-                guard let data = data else {
-                    completion(nil, self.buildError(code: kTicketDefaultServiceInvalidJSONContentErrorCode))
-                    return
-                }
-                do {
-                    guard let responseData = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String: Any] else {
-                        completion(nil, self.buildError(code: kTicketDefaultServiceJSONSerializationErrorCode))
-                        return
-                    }
-                    guard let ticketsJSON = responseData[kTicketDefaultServiceFetchResponseTicketKey] as? [[String: Any]] else {
-                        completion(nil, self.buildError(code: kTicketDefaultServiceInvalidJSONContentErrorCode))
-                        return
-                    }
-                    
-                    let tickets = Mapper<Ticket>().mapArray(JSONArray: ticketsJSON)
-                    completion(tickets, error)
-                } catch {
-                    completion(nil, self.buildError(code: kTicketDefaultServiceJSONSerializationErrorCode))
-                }
-            }
-            else {
+            guard error == nil else {
                 completion(nil, error)
+                return
             }
+            
+            guard let data = data else {
+                completion(nil, self.buildError(code: kTicketDefaultServiceInvalidJSONContentErrorCode))
+                return
+            }
+            
+            let responseData: [String: Any]!
+            do {
+                responseData = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as! [String: Any]
+            } catch {
+                completion(nil, self.buildError(code: kTicketDefaultServiceJSONSerializationErrorCode))
+                return
+            }
+            
+            guard let ticketsJSON = responseData[kTicketDefaultServiceFetchResponseTicketKey] as? [[String: Any]] else {
+                completion(nil, self.buildError(code: kTicketDefaultServiceInvalidJSONContentErrorCode))
+                return
+            }
+            
+            let tickets = Mapper<Ticket>().mapArray(JSONArray: ticketsJSON)
+            completion(tickets, error)
         }
     }
 
