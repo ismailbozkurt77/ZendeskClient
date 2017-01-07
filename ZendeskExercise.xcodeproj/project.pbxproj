@@ -20,10 +20,19 @@
 		8327015F19B607D500AF50E7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8327015D19B607D500AF50E7 /* InfoPlist.strings */; };
 		8327016C19B6087400AF50E7 /* CLP_MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8327016B19B6087400AF50E7 /* CLP_MainViewController.m */; };
 		8327016F19B60AF700AF50E7 /* CLP_TicketTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8327016E19B60AF700AF50E7 /* CLP_TicketTableViewController.m */; };
+		EC2A13041E210F6B007143B9 /* EndPointFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2A13031E210F6B007143B9 /* EndPointFactoryTests.swift */; };
 		EC3FB4D41E1F0FC3006D611E /* ZendeskNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC3FB4D31E1F0FC3006D611E /* ZendeskNetworking.framework */; };
 		EC3FB4D91E1F105D006D611E /* ZendeskNetworking.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EC3FB4D31E1F0FC3006D611E /* ZendeskNetworking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EC7162041E211147001BCD06 /* EndPointFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7162021E211147001BCD06 /* EndPointFactory.swift */; };
+		EC7162051E211147001BCD06 /* EndPoints.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC7162031E211147001BCD06 /* EndPoints.plist */; };
+		EC7162061E21118B001BCD06 /* EndPointFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7162021E211147001BCD06 /* EndPointFactory.swift */; };
+		EC7162071E21118E001BCD06 /* EndPoints.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC7162031E211147001BCD06 /* EndPoints.plist */; };
 		EC80277D1E210168008D0F8E /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC80277C1E210168008D0F8E /* ObjectMapper.framework */; };
 		EC80277E1E210178008D0F8E /* ObjectMapper.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EC80277C1E210168008D0F8E /* ObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		ECB2082D1E2107D700BEEFD0 /* TicketDefaultService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB2082B1E2107D700BEEFD0 /* TicketDefaultService.swift */; };
+		ECB2082E1E2107D700BEEFD0 /* TicketDefaultService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB2082B1E2107D700BEEFD0 /* TicketDefaultService.swift */; };
+		ECB2082F1E2107D700BEEFD0 /* TicketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB2082C1E2107D700BEEFD0 /* TicketService.swift */; };
+		ECB208301E2107D700BEEFD0 /* TicketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB2082C1E2107D700BEEFD0 /* TicketService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,8 +79,11 @@
 		8327016B19B6087400AF50E7 /* CLP_MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLP_MainViewController.m; sourceTree = "<group>"; };
 		8327016D19B60AF700AF50E7 /* CLP_TicketTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLP_TicketTableViewController.h; sourceTree = "<group>"; };
 		8327016E19B60AF700AF50E7 /* CLP_TicketTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLP_TicketTableViewController.m; sourceTree = "<group>"; };
+		EC2A13031E210F6B007143B9 /* EndPointFactoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPointFactoryTests.swift; sourceTree = "<group>"; };
 		EC3FB4D31E1F0FC3006D611E /* ZendeskNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZendeskNetworking.framework; path = Carthage/Build/iOS/ZendeskNetworking.framework; sourceTree = "<group>"; };
 		EC3FB4D51E1F100A006D611E /* ZendeskExercise-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZendeskExercise-Bridging-Header.h"; sourceTree = "<group>"; };
+		EC7162021E211147001BCD06 /* EndPointFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPointFactory.swift; sourceTree = "<group>"; };
+		EC7162031E211147001BCD06 /* EndPoints.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = EndPoints.plist; sourceTree = "<group>"; };
 		EC80277C1E210168008D0F8E /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -141,12 +153,13 @@
 				8327014A19B607D500AF50E7 /* CLPAppDelegate.h */,
 				8327014B19B607D500AF50E7 /* CLPAppDelegate.m */,
 				8327014D19B607D500AF50E7 /* Images.xcassets */,
-				8327014219B607D500AF50E7 /* Supporting Files */,
 				8327016A19B6087400AF50E7 /* CLP_MainViewController.h */,
 				8327016B19B6087400AF50E7 /* CLP_MainViewController.m */,
 				8327016D19B60AF700AF50E7 /* CLP_TicketTableViewController.h */,
 				8327016E19B60AF700AF50E7 /* CLP_TicketTableViewController.m */,
 				EC3FB4D51E1F100A006D611E /* ZendeskExercise-Bridging-Header.h */,
+				8327014219B607D500AF50E7 /* Supporting Files */,
+				EC7162011E211147001BCD06 /* Resources */,
 			);
 			path = ZendeskExercise;
 			sourceTree = "<group>";
@@ -165,6 +178,7 @@
 		8327015A19B607D500AF50E7 /* ZendeskExerciseTests */ = {
 			isa = PBXGroup;
 			children = (
+				EC2A13021E210F3D007143B9 /* Resources */,
 				8327015B19B607D500AF50E7 /* Supporting Files */,
 			);
 			path = ZendeskExerciseTests;
@@ -177,6 +191,23 @@
 				8327015D19B607D500AF50E7 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EC2A13021E210F3D007143B9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EC2A13031E210F6B007143B9 /* EndPointFactoryTests.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		EC7162011E211147001BCD06 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EC7162021E211147001BCD06 /* EndPointFactory.swift */,
+				EC7162031E211147001BCD06 /* EndPoints.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,6 +293,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8327014619B607D500AF50E7 /* InfoPlist.strings in Resources */,
+				EC7162051E211147001BCD06 /* EndPoints.plist in Resources */,
 				8327014E19B607D500AF50E7 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,6 +303,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8327015F19B607D500AF50E7 /* InfoPlist.strings in Resources */,
+				EC7162071E21118E001BCD06 /* EndPoints.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +314,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC7162041E211147001BCD06 /* EndPointFactory.swift in Sources */,
 				8327016C19B6087400AF50E7 /* CLP_MainViewController.m in Sources */,
 				8327014C19B607D500AF50E7 /* CLPAppDelegate.m in Sources */,
 				8327014819B607D500AF50E7 /* main.m in Sources */,
@@ -292,6 +326,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC7162061E21118B001BCD06 /* EndPointFactory.swift in Sources */,
+				EC2A13041E210F6B007143B9 /* EndPointFactoryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
