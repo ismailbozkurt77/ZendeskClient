@@ -21,10 +21,23 @@ class TicketCell: UITableViewCell {
     }
 
     func updateContent(ticketViewModel: TicketViewModel) {
-        //TODO: use localized string fro status
-        statusLabel.text = ticketViewModel.status?.rawValue
+        let statusText: String!
+        switch ticketViewModel.status {
+        case .new?:
+            statusText = NSLocalizedString("new", tableName: kCommonStringTable, comment: "new")
+        case .open?:
+            statusText = NSLocalizedString("open", tableName: kCommonStringTable, comment: "pending")
+        case .pending?:
+            statusText = NSLocalizedString("pending", tableName: kCommonStringTable, comment: "pending")
+        default:
+            statusText = ""
+        }
+        statusLabel.text = statusText
+        
         idLabel.text = ticketViewModel.ticketId
+        
         subjectLabel.text = ticketViewModel.subject
+        
         descriptionLabel.text = ticketViewModel.ticketDescription
     }
 
