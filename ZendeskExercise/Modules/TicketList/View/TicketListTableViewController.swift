@@ -14,7 +14,7 @@ class TicketListTableViewController: UITableViewController, TicketListView {
     
     var tickets: [TicketViewModel]?
     
-    private lazy var alertController = TicketListTableViewController.buildErrorAlertController()
+    private lazy var alertController: UIAlertController = { return self.buildErrorAlertController() }()
     private var activityIndicator: UIActivityIndicatorView!
     // MARK: - Lifecycle
     
@@ -91,7 +91,7 @@ class TicketListTableViewController: UITableViewController, TicketListView {
 
     // MARK: - Private Factory
     
-    class func buildErrorAlertController() -> UIAlertController {
+    func buildErrorAlertController() -> UIAlertController {
         let title = NSLocalizedString("fetch.tickets.failed.title", tableName: kStringTableTicketsList, comment: "")
         let alertController = UIAlertController(title: title, message: "", preferredStyle: .alert)
         let cancelTitle = NSLocalizedString("cancel", tableName: kStringTableCommon, comment: "cancel")
@@ -99,8 +99,8 @@ class TicketListTableViewController: UITableViewController, TicketListView {
         alertController.addAction(action)
         
         let retryTitle = NSLocalizedString("try.again", tableName: kStringTableCommon, comment: "try again")
-        let retryAction = UIAlertAction(title: retryTitle, style: .default, handler:{ (action: UIAlertAction) in
-            // TODO
+        let retryAction = UIAlertAction(title: retryTitle, style: .default, handler:{ [weak self] (action: UIAlertAction) in
+            self?.eventHandler.retry()
         })
         alertController.addAction(retryAction)
         

@@ -10,4 +10,5 @@ import Foundation
 
 protocol TicketListEventHandler {
     func viewIsReady()
+    func retry()
 }

@@ -23,11 +23,15 @@ class TicketListPresenter: NSObject, TicketListEventHandler {
     
     // MARK: - <TicketListEventHandler>
     func viewIsReady() {
-        self.processTickets()
+        fetchTickets()
+    }
+    
+    func retry() {
+        fetchTickets()
     }
     
     // MARK: - Private Helpers
-    func processTickets() {
+    func fetchTickets() {
         self.view?.displayLoading()
         self.interactor.fetchTickets { [weak self] (tickets: [Ticket]?, error: Error?) in
             self?.view?.dismissLoading()
