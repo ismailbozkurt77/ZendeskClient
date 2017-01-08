@@ -25,7 +25,7 @@ class TicketListTableViewController: UITableViewController, TicketListView {
         self.eventHandler.viewIsReady()
     }
 
-    // MARK: - „UITableViewDataSource>
+    // MARK: - <UITableViewDataSource>
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let tickets = self.tickets {
