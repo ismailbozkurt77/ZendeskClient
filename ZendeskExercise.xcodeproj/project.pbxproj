@@ -50,7 +50,6 @@
 		ECB1356D1E2172880062AC33 /* TicketCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB1356C1E2172880062AC33 /* TicketCell.swift */; };
 		ECB1356F1E2247990062AC33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB1356E1E2247990062AC33 /* AppDelegate.swift */; };
 		ECB135731E224E440062AC33 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECB135721E224E440062AC33 /* LaunchScreen.storyboard */; };
-		ECB135751E224FBC0062AC33 /* ZendeskExercise-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ECB135741E224FBC0062AC33 /* ZendeskExercise-Info.plist */; };
 		ECB135771E2250C60062AC33 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECB135761E2250C60062AC33 /* Images.xcassets */; };
 		ECB2082D1E2107D700BEEFD0 /* TicketDefaultService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB2082B1E2107D700BEEFD0 /* TicketDefaultService.swift */; };
 		ECB2082E1E2107D700BEEFD0 /* TicketDefaultService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB2082B1E2107D700BEEFD0 /* TicketDefaultService.swift */; };
@@ -465,7 +464,6 @@
 			files = (
 				ECB1356B1E2166E00062AC33 /* TicketList.storyboard in Resources */,
 				ECB135771E2250C60062AC33 /* Images.xcassets in Resources */,
-				ECB135751E224FBC0062AC33 /* ZendeskExercise-Info.plist in Resources */,
 				EC7162051E211147001BCD06 /* EndPoints.plist in Resources */,
 				ECB135731E224E440062AC33 /* LaunchScreen.storyboard in Resources */,
 				ECB414631E22712B00876085 /* TicketList.strings in Resources */,
