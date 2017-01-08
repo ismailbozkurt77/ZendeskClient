@@ -15,13 +15,14 @@ class TicketListTableViewController: UITableViewController, TicketListView {
     var tickets: [TicketViewModel]?
     
     private lazy var alertController = TicketListTableViewController.buildErrorAlertController()
-    
+    private var activityIndicator: UIActivityIndicatorView!
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupUI()
+        setupActivityIndicator()
         eventHandler.viewIsReady()
     }
 
@@ -29,6 +30,14 @@ class TicketListTableViewController: UITableViewController, TicketListView {
     
     private func setupUI() {
         title = NSLocalizedString("tickets", tableName: kStringTableCommon, comment: "Tickets")
+    }
+    
+    private func setupActivityIndicator() {
+        activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+        activityIndicator.hidesWhenStopped = true
+        let barItem = UIBarButtonItem(customView: activityIndicator)
+        navigationItem.rightBarButtonItem = nil
+        navigationItem.rightBarButtonItem = barItem
     }
     
     // MARK: - <UITableViewDataSource>
@@ -63,11 +72,11 @@ class TicketListTableViewController: UITableViewController, TicketListView {
     // MARK: - <TicketListView>
     
     func displayLoading() {
-        // TODO
+        activityIndicator.startAnimating()
     }
     
     func dismissLoading() {
-        // TODO
+        activityIndicator.stopAnimating()
     }
     
     func displayError(error: Error) {
