@@ -99,7 +99,6 @@
 		8327016E19B60AF700AF50E7 /* CLP_TicketTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLP_TicketTableViewController.m; sourceTree = "<group>"; };
 		EC2A13031E210F6B007143B9 /* EndPointFactoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPointFactoryTests.swift; sourceTree = "<group>"; };
 		EC3FB4D31E1F0FC3006D611E /* ZendeskNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZendeskNetworking.framework; path = Carthage/Build/iOS/ZendeskNetworking.framework; sourceTree = "<group>"; };
-		EC3FB4D51E1F100A006D611E /* ZendeskExercise-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZendeskExercise-Bridging-Header.h"; sourceTree = "<group>"; };
 		EC469AF61E211A3300195B51 /* Ticket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ticket.swift; sourceTree = "<group>"; };
 		EC469AFC1E211E1200195B51 /* TicketDefaultServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketDefaultServiceTests.swift; sourceTree = "<group>"; };
 		EC469AFF1E214F1000195B51 /* TicketListInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketListInteractor.swift; sourceTree = "<group>"; };
@@ -121,6 +120,7 @@
 		ECB135721E224E440062AC33 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ECB135741E224FBC0062AC33 /* ZendeskExercise-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ZendeskExercise-Info.plist"; sourceTree = "<group>"; };
 		ECB135761E2250C60062AC33 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		ECB135781E2252210062AC33 /* ZendeskExercise-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ZendeskExercise-Bridging-Header.h"; sourceTree = "<group>"; };
 		ECB2082B1E2107D700BEEFD0 /* TicketDefaultService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketDefaultService.swift; sourceTree = "<group>"; };
 		ECB2082C1E2107D700BEEFD0 /* TicketService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -193,7 +193,6 @@
 				8327016B19B6087400AF50E7 /* CLP_MainViewController.m */,
 				8327016D19B60AF700AF50E7 /* CLP_TicketTableViewController.h */,
 				8327016E19B60AF700AF50E7 /* CLP_TicketTableViewController.m */,
-				EC3FB4D51E1F100A006D611E /* ZendeskExercise-Bridging-Header.h */,
 				EC80277A1E20FF22008D0F8E /* Modules */,
 				ECB208291E2107D700BEEFD0 /* Services */,
 				EC80278F1E2103C0008D0F8E /* Models */,
@@ -206,6 +205,7 @@
 		8327014219B607D500AF50E7 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				ECB135781E2252210062AC33 /* ZendeskExercise-Bridging-Header.h */,
 				ECB135741E224FBC0062AC33 /* ZendeskExercise-Info.plist */,
 				8327014919B607D500AF50E7 /* ZendeskExercise-Prefix.pch */,
 			);
@@ -624,7 +624,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zendesk.exercise.refactor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "ZendeskExercise/ZendeskExercise-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "ZendeskExercise/SupportingFiles/ZendeskExercise-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				WRAPPER_EXTENSION = app;
@@ -649,7 +649,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zendesk.exercise.refactor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "ZendeskExercise/ZendeskExercise-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "ZendeskExercise/SupportingFiles/ZendeskExercise-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				WRAPPER_EXTENSION = app;
 			};
