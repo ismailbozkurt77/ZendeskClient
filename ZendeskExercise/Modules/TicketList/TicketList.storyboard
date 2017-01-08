@@ -24,7 +24,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ewL-ps-JrF" id="HGF-bf-LYY">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="99"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="255" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="755" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vLW-ip-TlQ">
@@ -70,10 +70,10 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="descriptionLabel" destination="Mxf-aV-wet" id="ZZI-6i-zu1"/>
+                                    <outlet property="descriptionLabel" destination="eMn-PS-6rL" id="hvm-LQ-l86"/>
                                     <outlet property="idLabel" destination="rQA-Rj-uXt" id="2lf-AO-vC1"/>
                                     <outlet property="statusLabel" destination="vLW-ip-TlQ" id="osy-5v-ca2"/>
-                                    <outlet property="subjectLabel" destination="eMn-PS-6rL" id="7Dy-gK-Op9"/>
+                                    <outlet property="subjectLabel" destination="Mxf-aV-wet" id="Bxf-WT-Aei"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -85,7 +85,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pwx-zN-ZZi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-839" y="9"/>
+            <point key="canvasLocation" x="-1140" y="-45"/>
         </scene>
     </scenes>
 </document>

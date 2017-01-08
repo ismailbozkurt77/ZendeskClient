@@ -17,22 +17,35 @@ class TicketCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        statusLabel.font = UIFont.systemFont(ofSize: 20.0)
+        idLabel.font = UIFont.systemFont(ofSize: 25.0)
+        idLabel.textColor = UIColor.black
+        subjectLabel.font = UIFont.systemFont(ofSize: 15.0)
+        subjectLabel.textColor = UIColor.darkText
+        descriptionLabel.font = UIFont.systemFont(ofSize: 12.0)
+        descriptionLabel.textColor = UIColor.darkGray
     }
 
     func updateContent(ticketViewModel: TicketViewModel) {
         let statusText: String!
+        let statusColor: UIColor!
         switch ticketViewModel.status {
         case .new?:
             statusText = NSLocalizedString("new", tableName: kStringTableCommon, comment: "new")
+            statusColor = UIColor.blue
         case .open?:
             statusText = NSLocalizedString("open", tableName: kStringTableCommon, comment: "pending")
+            statusColor = UIColor.green
         case .pending?:
             statusText = NSLocalizedString("pending", tableName: kStringTableCommon, comment: "pending")
+            statusColor = UIColor.orange
         default:
             statusText = ""
+            statusColor = UIColor.black
         }
         statusLabel.text = statusText
+        statusLabel.textColor = statusColor
         
         idLabel.text = ticketViewModel.ticketId
         
