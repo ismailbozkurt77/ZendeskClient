@@ -1,0 +1,10 @@
+framework module ZendeskNetworking {
+  umbrella header "ZendeskNetworking.h"
+
+  export *
+  module * { export * }
+}
+
+module ZendeskNetworking.Swift {
+    header "ZendeskNetworking-Swift.h"
+}
