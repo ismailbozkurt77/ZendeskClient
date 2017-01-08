@@ -9,12 +9,12 @@
 import UIKit
 
 class TicketMapper {
-    private var numberFormatter: NumberFormatter
-    
-    init() {
-        numberFormatter = NumberFormatter()
-        numberFormatter.numberStyle = .decimal
-    }
+
+    private lazy var numberFormatter: NumberFormatter = {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        return formatter
+    }()
     
     func ticketViewModel(model: Ticket) -> TicketViewModel {
         let viewModel = TicketViewModel()
