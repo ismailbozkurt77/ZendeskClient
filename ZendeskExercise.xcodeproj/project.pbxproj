@@ -10,7 +10,6 @@
 		8327013C19B607D500AF50E7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8327013B19B607D500AF50E7 /* Foundation.framework */; };
 		8327013E19B607D500AF50E7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8327013D19B607D500AF50E7 /* CoreGraphics.framework */; };
 		8327014019B607D500AF50E7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8327013F19B607D500AF50E7 /* UIKit.framework */; };
-		8327014E19B607D500AF50E7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8327014D19B607D500AF50E7 /* Images.xcassets */; };
 		8327015519B607D500AF50E7 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8327015419B607D500AF50E7 /* XCTest.framework */; };
 		8327015619B607D500AF50E7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8327013B19B607D500AF50E7 /* Foundation.framework */; };
 		8327015719B607D500AF50E7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8327013F19B607D500AF50E7 /* UIKit.framework */; };
@@ -53,6 +52,7 @@
 		ECB1356F1E2247990062AC33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB1356E1E2247990062AC33 /* AppDelegate.swift */; };
 		ECB135731E224E440062AC33 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECB135721E224E440062AC33 /* LaunchScreen.storyboard */; };
 		ECB135751E224FBC0062AC33 /* ZendeskExercise-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ECB135741E224FBC0062AC33 /* ZendeskExercise-Info.plist */; };
+		ECB135771E2250C60062AC33 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECB135761E2250C60062AC33 /* Images.xcassets */; };
 		ECB2082D1E2107D700BEEFD0 /* TicketDefaultService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB2082B1E2107D700BEEFD0 /* TicketDefaultService.swift */; };
 		ECB2082E1E2107D700BEEFD0 /* TicketDefaultService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB2082B1E2107D700BEEFD0 /* TicketDefaultService.swift */; };
 		ECB2082F1E2107D700BEEFD0 /* TicketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB2082C1E2107D700BEEFD0 /* TicketService.swift */; };
@@ -89,7 +89,6 @@
 		8327013D19B607D500AF50E7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		8327013F19B607D500AF50E7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8327014919B607D500AF50E7 /* ZendeskExercise-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZendeskExercise-Prefix.pch"; sourceTree = "<group>"; };
-		8327014D19B607D500AF50E7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8327015319B607D500AF50E7 /* ZendeskExerciseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZendeskExerciseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8327015419B607D500AF50E7 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		8327015C19B607D500AF50E7 /* ZendeskExerciseTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ZendeskExerciseTests-Info.plist"; sourceTree = "<group>"; };
@@ -121,6 +120,7 @@
 		ECB1356E1E2247990062AC33 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECB135721E224E440062AC33 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ECB135741E224FBC0062AC33 /* ZendeskExercise-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ZendeskExercise-Info.plist"; sourceTree = "<group>"; };
+		ECB135761E2250C60062AC33 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		ECB2082B1E2107D700BEEFD0 /* TicketDefaultService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketDefaultService.swift; sourceTree = "<group>"; };
 		ECB2082C1E2107D700BEEFD0 /* TicketService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -189,7 +189,6 @@
 			isa = PBXGroup;
 			children = (
 				ECB1356E1E2247990062AC33 /* AppDelegate.swift */,
-				8327014D19B607D500AF50E7 /* Images.xcassets */,
 				8327016A19B6087400AF50E7 /* CLP_MainViewController.h */,
 				8327016B19B6087400AF50E7 /* CLP_MainViewController.m */,
 				8327016D19B60AF700AF50E7 /* CLP_TicketTableViewController.h */,
@@ -297,6 +296,7 @@
 		EC7162011E211147001BCD06 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				ECB135761E2250C60062AC33 /* Images.xcassets */,
 				EC7162021E211147001BCD06 /* EndPointFactory.swift */,
 				EC7162031E211147001BCD06 /* EndPoints.plist */,
 				ECB135721E224E440062AC33 /* LaunchScreen.storyboard */,
@@ -449,10 +449,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECB1356B1E2166E00062AC33 /* TicketList.storyboard in Resources */,
+				ECB135771E2250C60062AC33 /* Images.xcassets in Resources */,
 				ECB135751E224FBC0062AC33 /* ZendeskExercise-Info.plist in Resources */,
 				EC7162051E211147001BCD06 /* EndPoints.plist in Resources */,
 				ECB135731E224E440062AC33 /* LaunchScreen.storyboard in Resources */,
-				8327014E19B607D500AF50E7 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
