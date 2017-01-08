@@ -25,6 +25,8 @@ protocol TicketService {
 }
 
 extension TicketService {
+    
+    @discardableResult
     func fetchTickets(sortBy: TicketSortOrderOption = .id,
                       ascending: Bool = true,
                       completion: @escaping TicketServiceFetchTicketCompletion) -> URLSessionTask{

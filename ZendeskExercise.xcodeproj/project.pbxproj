@@ -44,6 +44,7 @@
 		EC7162071E21118E001BCD06 /* EndPoints.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC7162031E211147001BCD06 /* EndPoints.plist */; };
 		EC80277D1E210168008D0F8E /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC80277C1E210168008D0F8E /* ObjectMapper.framework */; };
 		EC80277E1E210178008D0F8E /* ObjectMapper.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EC80277C1E210168008D0F8E /* ObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EC8423511E2298C000F446D5 /* TicketListInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8423501E2298C000F446D5 /* TicketListInteractorTests.swift */; };
 		ECB135691E215E910062AC33 /* TicketMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB135681E215E910062AC33 /* TicketMapperTests.swift */; };
 		ECB1356B1E2166E00062AC33 /* TicketList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECB1356A1E2166E00062AC33 /* TicketList.storyboard */; };
 		ECB1356D1E2172880062AC33 /* TicketCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB1356C1E2172880062AC33 /* TicketCell.swift */; };
@@ -58,6 +59,7 @@
 		ECB414601E226DA400876085 /* Common.strings in Resources */ = {isa = PBXBuildFile; fileRef = ECB4145D1E226DA400876085 /* Common.strings */; };
 		ECB414611E226DA400876085 /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB4145F1E226DA400876085 /* Localization.swift */; };
 		ECB414631E22712B00876085 /* TicketList.strings in Resources */ = {isa = PBXBuildFile; fileRef = ECB414621E22712B00876085 /* TicketList.strings */; };
+		ECB414651E22911500876085 /* TicketListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB414641E22911500876085 /* TicketListPresenterTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +112,8 @@
 		EC7162021E211147001BCD06 /* EndPointFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPointFactory.swift; sourceTree = "<group>"; };
 		EC7162031E211147001BCD06 /* EndPoints.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = EndPoints.plist; sourceTree = "<group>"; };
 		EC80277C1E210168008D0F8E /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
+		EC84234F1E2295D500F446D5 /* ZendeskExerciseTests-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ZendeskExerciseTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		EC8423501E2298C000F446D5 /* TicketListInteractorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketListInteractorTests.swift; sourceTree = "<group>"; };
 		ECB135681E215E910062AC33 /* TicketMapperTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketMapperTests.swift; sourceTree = "<group>"; };
 		ECB1356A1E2166E00062AC33 /* TicketList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TicketList.storyboard; sourceTree = "<group>"; };
 		ECB1356C1E2172880062AC33 /* TicketCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketCell.swift; sourceTree = "<group>"; };
@@ -123,6 +127,7 @@
 		ECB4145E1E226DA400876085 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Common.strings; sourceTree = "<group>"; };
 		ECB4145F1E226DA400876085 /* Localization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
 		ECB414621E22712B00876085 /* TicketList.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = TicketList.strings; sourceTree = "<group>"; };
+		ECB414641E22911500876085 /* TicketListPresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketListPresenterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +227,7 @@
 		8327015B19B607D500AF50E7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EC84234F1E2295D500F446D5 /* ZendeskExerciseTests-Bridging-Header.h */,
 				8327015C19B607D500AF50E7 /* ZendeskExerciseTests-Info.plist */,
 				8327015D19B607D500AF50E7 /* InfoPlist.strings */,
 			);
@@ -342,6 +348,8 @@
 			isa = PBXGroup;
 			children = (
 				ECB135681E215E910062AC33 /* TicketMapperTests.swift */,
+				ECB414641E22911500876085 /* TicketListPresenterTests.swift */,
+				EC8423501E2298C000F446D5 /* TicketListInteractorTests.swift */,
 			);
 			path = TicketList;
 			sourceTree = "<group>";
@@ -506,11 +514,13 @@
 			files = (
 				ECB208301E2107D700BEEFD0 /* TicketService.swift in Sources */,
 				EC469AFD1E211E1200195B51 /* TicketDefaultServiceTests.swift in Sources */,
+				ECB414651E22911500876085 /* TicketListPresenterTests.swift in Sources */,
 				EC469B1E1E21589700195B51 /* TicketMapper.swift in Sources */,
 				EC469B131E21546A00195B51 /* TicketListPresenter.swift in Sources */,
 				ECB135691E215E910062AC33 /* TicketMapperTests.swift in Sources */,
 				EC469B011E214F1000195B51 /* TicketListInteractor.swift in Sources */,
 				EC7162061E21118B001BCD06 /* EndPointFactory.swift in Sources */,
+				EC8423511E2298C000F446D5 /* TicketListInteractorTests.swift in Sources */,
 				EC469B041E214FF300195B51 /* TicketListDefaultInteractor.swift in Sources */,
 				EC469B161E2154B800195B51 /* TicketListView.swift in Sources */,
 				EC469AF81E211A3300195B51 /* Ticket.swift in Sources */,
@@ -693,7 +703,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ibm.Zendesktopher.lapat.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "ZendeskExercise/ZendeskExerciseTests-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "ZendeskExerciseTests/ZendeskExerciseTests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUNDLE_LOADER)";
@@ -719,7 +729,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ibm.Zendesktopher.lapat.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "ZendeskExercise/ZendeskExerciseTests-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "ZendeskExerciseTests/ZendeskExerciseTests-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
