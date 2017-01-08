@@ -25,6 +25,7 @@ class TicketCell: UITableViewCell {
         subjectLabel.textColor = UIColor.darkText
         descriptionLabel.font = UIFont.systemFont(ofSize: 12.0)
         descriptionLabel.textColor = UIColor.darkGray
+        layoutIfNeeded()
     }
 
     func updateContent(ticketViewModel: TicketViewModel) {
