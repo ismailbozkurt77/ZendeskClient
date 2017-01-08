@@ -14,8 +14,6 @@
 		8327015619B607D500AF50E7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8327013B19B607D500AF50E7 /* Foundation.framework */; };
 		8327015719B607D500AF50E7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8327013F19B607D500AF50E7 /* UIKit.framework */; };
 		8327015F19B607D500AF50E7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8327015D19B607D500AF50E7 /* InfoPlist.strings */; };
-		8327016C19B6087400AF50E7 /* CLP_MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8327016B19B6087400AF50E7 /* CLP_MainViewController.m */; };
-		8327016F19B60AF700AF50E7 /* CLP_TicketTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8327016E19B60AF700AF50E7 /* CLP_TicketTableViewController.m */; };
 		EC2A13041E210F6B007143B9 /* EndPointFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2A13031E210F6B007143B9 /* EndPointFactoryTests.swift */; };
 		EC2A13061E2110E5007143B9 /* ZendeskNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC3FB4D31E1F0FC3006D611E /* ZendeskNetworking.framework */; };
 		EC2A13071E2110E8007143B9 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC80277C1E210168008D0F8E /* ObjectMapper.framework */; };
@@ -96,10 +94,6 @@
 		8327015419B607D500AF50E7 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		8327015C19B607D500AF50E7 /* ZendeskExerciseTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ZendeskExerciseTests-Info.plist"; sourceTree = "<group>"; };
 		8327015E19B607D500AF50E7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		8327016A19B6087400AF50E7 /* CLP_MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLP_MainViewController.h; sourceTree = "<group>"; };
-		8327016B19B6087400AF50E7 /* CLP_MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLP_MainViewController.m; sourceTree = "<group>"; };
-		8327016D19B60AF700AF50E7 /* CLP_TicketTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLP_TicketTableViewController.h; sourceTree = "<group>"; };
-		8327016E19B60AF700AF50E7 /* CLP_TicketTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLP_TicketTableViewController.m; sourceTree = "<group>"; };
 		EC2A13031E210F6B007143B9 /* EndPointFactoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPointFactoryTests.swift; sourceTree = "<group>"; };
 		EC3FB4D31E1F0FC3006D611E /* ZendeskNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZendeskNetworking.framework; path = Carthage/Build/iOS/ZendeskNetworking.framework; sourceTree = "<group>"; };
 		EC469AF61E211A3300195B51 /* Ticket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ticket.swift; sourceTree = "<group>"; };
@@ -195,10 +189,6 @@
 			isa = PBXGroup;
 			children = (
 				ECB1356E1E2247990062AC33 /* AppDelegate.swift */,
-				8327016A19B6087400AF50E7 /* CLP_MainViewController.h */,
-				8327016B19B6087400AF50E7 /* CLP_MainViewController.m */,
-				8327016D19B60AF700AF50E7 /* CLP_TicketTableViewController.h */,
-				8327016E19B60AF700AF50E7 /* CLP_TicketTableViewController.m */,
 				EC80277A1E20FF22008D0F8E /* Modules */,
 				ECB208291E2107D700BEEFD0 /* Services */,
 				EC80278F1E2103C0008D0F8E /* Models */,
@@ -495,7 +485,6 @@
 				EC7162041E211147001BCD06 /* EndPointFactory.swift in Sources */,
 				ECB1356F1E2247990062AC33 /* AppDelegate.swift in Sources */,
 				ECB2082D1E2107D700BEEFD0 /* TicketDefaultService.swift in Sources */,
-				8327016C19B6087400AF50E7 /* CLP_MainViewController.m in Sources */,
 				EC469AF71E211A3300195B51 /* Ticket.swift in Sources */,
 				ECB1356D1E2172880062AC33 /* TicketCell.swift in Sources */,
 				EC469B151E2154B800195B51 /* TicketListView.swift in Sources */,
@@ -506,7 +495,6 @@
 				EC469B001E214F1000195B51 /* TicketListInteractor.swift in Sources */,
 				EC469B101E21546A00195B51 /* TicketListEventHandler.swift in Sources */,
 				ECB414611E226DA400876085 /* Localization.swift in Sources */,
-				8327016F19B60AF700AF50E7 /* CLP_TicketTableViewController.m in Sources */,
 				EC469B1A1E2155F800195B51 /* TicketListModuleBuilder.swift in Sources */,
 				EC469B211E21590000195B51 /* TicketViewModel.swift in Sources */,
 			);
