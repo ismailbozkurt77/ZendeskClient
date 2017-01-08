@@ -37,4 +37,4 @@ In theory the interactor is the one who contacts with the entities and server. H
 ## Technical Debts
 1. Removing the user authentication credetials from the code is the most urgent task. Implementing a proper login and if neccessary storing user username and pasword on keychain is the best practise for users' security.
 1. Improving the [ZendeskNetworking](https://github.com/ismailbozkurt77/ZendeskNetworking) or using the most used Swift networing api. ZendeskNetworking currently supports on HTTP Get mehod and has limited features compared to frameworks like [Alamofire](https://github.com/Alamofire/Alamofire)
-1. Better unit tests with mocking and stubing support
+1. Better unit tests with proper mocking and stubing support.
