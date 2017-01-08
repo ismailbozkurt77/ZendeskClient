@@ -22,7 +22,7 @@ A variant of [VIPER](https://www.objc.io/issues/13-architecture/viper/) architec
 
 ### Ticket List
 #### Builder
-[TicketListModuleBuilder](https://github.com/ismailbozkurt77/ZendeskClient/blob/master/ZendeskExercise/Modules/TicketList/TicketListModuleBuilder.swift) builds ticket list viper module and returns the corresponding viewController instance.
+[TicketListModuleBuilder](https://github.com/ismailbozkurt77/ZendeskClient/blob/master/ZendeskExercise/Modules/TicketList/TicketListModuleBuilder.swift) builds ticket list viper module and returns the corresponding viewController instance. Builders are the entry point of every module and only component which knows the exact classes of the components. The other components communicate with each other via protocols.
 #### Presenter
 [TicketListPresenter](https://github.com/ismailbozkurt77/ZendeskClient/blob/master/ZendeskExercise/Modules/TicketList/Presenter/TicketListPresenter.swift) conforms the [TicketListEventHandler](https://github.com/ismailbozkurt77/ZendeskClient/blob/master/ZendeskExercise/Modules/TicketList/Presenter/TicketListEventHandler.swift) protocol to talk with View. It is responsible for handling the system/user events. Moreover it manages and populates the [TicketListView](https://github.com/ismailbozkurt77/ZendeskClient/blob/master/ZendeskExercise/Modules/TicketList/View/TicketListView.swift) with [ViewModel](https://github.com/ismailbozkurt77/ZendeskClient/blob/master/ZendeskExercise/Modules/TicketList/View/TicketViewModel.swift)s
 #### Interactor
