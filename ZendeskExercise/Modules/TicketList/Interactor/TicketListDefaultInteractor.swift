@@ -17,7 +17,7 @@ class TicketListDefaultInteractor: NSObject, TicketListInteractor {
     
     // MARK: - TicketListInteractor
     func fetchTickets(completion: @escaping TicketServiceFetchTicketCompletion) {
-        let dataTask = self.service.fetchTickets(completion: completion)
+        let dataTask = self.service.fetchTickets(sortBy: .status, ascending: false, completion: completion)
         self.onGoingDataTasks.append(dataTask)
     }
     
