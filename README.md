@@ -35,7 +35,7 @@ Wireframes are responsible of the navigation between the VIPER modules. Since th
 In theory the interactor is the one who contacts with the entities and server. However, the network requests are usually long and ugly. so we use a dedicated service class to encapsulate all network calls. [TicketListService](https://github.com/ismailbozkurt77/ZendeskClient/tree/master/ZendeskExercise/Services/Ticket) uses a rest client to make rest API calls.
 
 ## Technical Debts
-1.	Removing the user authentication credentials from the code is the most urgent task. Implementing a proper login and if necessary storing user username and password on keychain is the best practice for users' security.
-1. Improving the [ZendeskNetworking](https://github.com/ismailbozkurt77/ZendeskNetworking) or using the most used Swift networing api. ZendeskNetworking currently supports on HTTP Get mehod and has limited features compared to frameworks like [Alamofire](https://github.com/Alamofire/Alamofire)
+1.	Removing the user authentication credentials from the code is the most urgent task. Implementing a proper login and if necessary storing user username and password on keychain are the best practices for users' security.
+1.	Improving the [ZendeskNetworking](https://github.com/ismailbozkurt77/ZendeskNetworking) or replacing it with an open source Swift networking API. ZendeskNetworking currently supports on HTTP Get method and has limited features compared to other frameworks like [Alamofire](https://github.com/Alamofire/Alamofire).
 1. Better unit tests with proper mocking and stubbing support.
 
