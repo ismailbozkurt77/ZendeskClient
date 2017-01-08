@@ -28,7 +28,7 @@ class TicketListTableViewController: UITableViewController, TicketListView {
     // MARK: - Setup
     
     private func setupUI() {
-        title = NSLocalizedString("tickets", tableName: kCommonStringTable, comment: "Tickets")
+        title = NSLocalizedString("tickets", tableName: kStringTableCommon, comment: "Tickets")
     }
     
     // MARK: - <UITableViewDataSource>
@@ -83,10 +83,18 @@ class TicketListTableViewController: UITableViewController, TicketListView {
     // MARK: - Private Factory
     
     class func buildErrorAlertController() -> UIAlertController {
-        let alertController = UIAlertController(title: nil, message: "", preferredStyle: .alert)
-        // TODO: use localization in here
-        let action = UIAlertAction(title: "", style: .cancel, handler: nil)
+        let title = NSLocalizedString("fetch.tickets.failed.title", tableName: kStringTableTicketsList, comment: "")
+        let alertController = UIAlertController(title: title, message: "", preferredStyle: .alert)
+        let cancelTitle = NSLocalizedString("cancel", tableName: kStringTableCommon, comment: "cancel")
+        let action = UIAlertAction(title: cancelTitle, style: .cancel, handler: nil)
         alertController.addAction(action)
+        
+        let retryTitle = NSLocalizedString("try.again", tableName: kStringTableCommon, comment: "try again")
+        let retryAction = UIAlertAction(title: retryTitle, style: .default, handler:{ (action: UIAlertAction) in
+            // TODO
+        })
+        alertController.addAction(retryAction)
+        
         return alertController
     }
 }

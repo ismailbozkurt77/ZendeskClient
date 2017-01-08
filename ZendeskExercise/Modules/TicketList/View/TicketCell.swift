@@ -24,11 +24,11 @@ class TicketCell: UITableViewCell {
         let statusText: String!
         switch ticketViewModel.status {
         case .new?:
-            statusText = NSLocalizedString("new", tableName: kCommonStringTable, comment: "new")
+            statusText = NSLocalizedString("new", tableName: kStringTableCommon, comment: "new")
         case .open?:
-            statusText = NSLocalizedString("open", tableName: kCommonStringTable, comment: "pending")
+            statusText = NSLocalizedString("open", tableName: kStringTableCommon, comment: "pending")
         case .pending?:
-            statusText = NSLocalizedString("pending", tableName: kCommonStringTable, comment: "pending")
+            statusText = NSLocalizedString("pending", tableName: kStringTableCommon, comment: "pending")
         default:
             statusText = ""
         }

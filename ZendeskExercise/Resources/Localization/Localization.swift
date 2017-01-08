@@ -6,4 +6,5 @@
 //  Copyright © 2017 Zendesk. All rights reserved.
 //
 
-public let kCommonStringTable = "Common"
+public let kStringTableCommon = "Common"
+public let kStringTableTicketsList = "TicketList"
