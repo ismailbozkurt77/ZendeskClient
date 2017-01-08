@@ -20,11 +20,17 @@ class TicketListTableViewController: UITableViewController, TicketListView {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    //TODO self.title
         
-        self.eventHandler.viewIsReady()
+        setupUI()
+        eventHandler.viewIsReady()
     }
 
+    // MARK: - Setup
+    
+    private func setupUI() {
+        title = NSLocalizedString("tickets", tableName: kCommonStringTable, comment: "Tickets")
+    }
+    
     // MARK: - <UITableViewDataSource>
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
