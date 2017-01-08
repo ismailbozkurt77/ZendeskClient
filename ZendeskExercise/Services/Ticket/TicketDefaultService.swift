@@ -11,18 +11,35 @@ import UIKit
 import ZendeskNetworking
 import ObjectMapper
 
-
+// MARK: - Path
 private let kTicketDefaultServicefetchTicketPath = "/views/39551161/tickets.json"
 
+// MARK: - Response Keys
 private let kTicketDefaultServiceFetchResponseTicketKey = "tickets"
 
+
+// MARK: - Error
 private let kTicketDefaultServiceErrorDomain = "com.ismail.bozkurt.zendesk.client.ticket.service.error"
 private let kTicketDefaultServiceJSONSerializationErrorCode = -10000
 private let kTicketDefaultServiceInvalidJSONContentErrorCode = -10001
 
+// MARK: - Credentials
 // TODO: remove credentials from code
 private let kTicketDefaultServiceCredentialsUsername = "acooke+techtest@zendesk.com"
 private let kTicketDefaultServiceCredentialsPassword = "mobile"
+
+
+// MARK: - Query
+
+let kTicketDefaultServiceFetchTicketSortByQueryKey = "sort_by"
+private enum FetchTicketQuerySort: String {
+    case subject = "subject"
+    case id = "id"
+    case status = "status"
+}
+let kTicketDefaultServiceFetchTicketSortOrderQueryKey = "sort_order"
+let kTicketDefaultServiceFetchTicketSortOrderQueryAscending = "asc"
+let kTicketDefaultServiceFetchTicketSortOrderQueryDescending = "desc"
 
 
 class TicketDefaultService: NSObject, TicketService {
@@ -38,9 +55,9 @@ class TicketDefaultService: NSObject, TicketService {
     // MARK: - TicketService
     
     @discardableResult
-    func fetchTickets(completion: @escaping TicketServiceFetchTicketCompletion) -> URLSessionTask {
-        let url = self.buildFetchTicketUrl()
-        let auhtHeader = self.buildFetchTicketHeaders()
+    func fetchTickets(sortBy: TicketSortOrderOption, ascending: Bool, completion: @escaping TicketServiceFetchTicketCompletion) -> URLSessionTask {
+        let url = TicketDefaultService.buildFetchTicketUrl(sortBy: sortBy, ascending: ascending)
+        let auhtHeader = TicketDefaultService.buildFetchTicketHeaders()
         let dataTask = self.restClient.GET(url: url,
                                            headers: auhtHeader,
                                            completion:
@@ -65,7 +82,7 @@ class TicketDefaultService: NSObject, TicketService {
             }
             
             guard let data = data else {
-                completion(nil, self.buildError(code: kTicketDefaultServiceInvalidJSONContentErrorCode))
+                completion(nil, TicketDefaultService.buildError(code: kTicketDefaultServiceInvalidJSONContentErrorCode))
                 return
             }
             
@@ -73,12 +90,12 @@ class TicketDefaultService: NSObject, TicketService {
             do {
                 responseData = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as! [String: Any]
             } catch {
-                completion(nil, self.buildError(code: kTicketDefaultServiceJSONSerializationErrorCode))
+                completion(nil, TicketDefaultService.buildError(code: kTicketDefaultServiceJSONSerializationErrorCode))
                 return
             }
             
             guard let ticketsJSON = responseData[kTicketDefaultServiceFetchResponseTicketKey] as? [[String: Any]] else {
-                completion(nil, self.buildError(code: kTicketDefaultServiceInvalidJSONContentErrorCode))
+                completion(nil, TicketDefaultService.buildError(code: kTicketDefaultServiceInvalidJSONContentErrorCode))
                 return
             }
             
@@ -89,23 +106,59 @@ class TicketDefaultService: NSObject, TicketService {
 
     // MARK: - Private Factory
 
-    fileprivate func buildFetchTicketUrl() -> URL {
+    fileprivate class func buildFetchTicketUrl(sortBy: TicketSortOrderOption, ascending: Bool) -> URL {
         let baseUrl = EndPointFactory.baseUrl()
         
         var urlComponents = URLComponents(url: baseUrl, resolvingAgainstBaseURL: true)
         urlComponents?.path += kTicketDefaultServicefetchTicketPath
         
+        urlComponents?.queryItems = [self.buildFetchTicketsSortByQueryItem(sortBy: sortBy),
+                                     self.buildFetchTicketsSortOrderQueryItem(ascending: ascending)]
+        
         return (urlComponents?.url)!
     }
     
-    fileprivate func buildFetchTicketHeaders() -> [String: String] {
+    fileprivate class func buildFetchTicketsSortByQueryItem(sortBy: TicketSortOrderOption) -> URLQueryItem {
+        let queryItem: URLQueryItem!
+        
+        switch sortBy {
+        case .id:
+            queryItem = URLQueryItem(name: kTicketDefaultServiceFetchTicketSortByQueryKey,
+                                     value: FetchTicketQuerySort.id.rawValue)
+        case .subject:
+            queryItem = URLQueryItem(name: kTicketDefaultServiceFetchTicketSortByQueryKey,
+                                     value: FetchTicketQuerySort.subject.rawValue)
+        case .status:
+            queryItem = URLQueryItem(name: kTicketDefaultServiceFetchTicketSortByQueryKey,
+                                     value: FetchTicketQuerySort.status.rawValue)
+        }
+        
+        return queryItem
+    }
+    
+    fileprivate class func buildFetchTicketsSortOrderQueryItem(ascending: Bool) -> URLQueryItem {
+        let queryItem: URLQueryItem!
+        
+        if ascending {
+            queryItem = URLQueryItem(name: kTicketDefaultServiceFetchTicketSortOrderQueryKey,
+                                     value: kTicketDefaultServiceFetchTicketSortOrderQueryAscending)
+        }
+        else {
+            queryItem = URLQueryItem(name: kTicketDefaultServiceFetchTicketSortOrderQueryKey,
+                                     value: kTicketDefaultServiceFetchTicketSortOrderQueryDescending)
+        }
+        
+        return queryItem
+    }
+    
+    fileprivate class func buildFetchTicketHeaders() -> [String: String] {
         let requestHeaderSerializer = RequestHeaderSerializer()
         requestHeaderSerializer.setAutherizationHeader(username: kTicketDefaultServiceCredentialsUsername,
                                                        password: kTicketDefaultServiceCredentialsPassword)
         return requestHeaderSerializer.headers
     }
     
-    fileprivate func buildError(code: Int) -> NSError {
+    fileprivate class func buildError(code: Int) -> NSError {
         let error = NSError(domain: kTicketDefaultServiceErrorDomain,
                             code: code,
                             userInfo: nil)
