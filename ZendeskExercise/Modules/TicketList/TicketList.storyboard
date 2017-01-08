@@ -13,7 +13,7 @@
         <!--Ticket List Table View Controller-->
         <scene sceneID="ch4-WA-7za">
             <objects>
-                <tableViewController id="7aZ-cF-aDC" customClass="TicketListTableViewController" customModule="ZendeskExercise" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="TicketListTableViewController" id="7aZ-cF-aDC" customClass="TicketListTableViewController" customModule="ZendeskExercise" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="fnt-iE-vtX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

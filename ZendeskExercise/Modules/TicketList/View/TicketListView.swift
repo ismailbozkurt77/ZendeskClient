@@ -9,7 +9,7 @@
 import Foundation
 
 
-protocol TicketListView {
+protocol TicketListView: class {
     func displayLoading()
     func dismissLoading()
     

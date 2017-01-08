@@ -12,7 +12,7 @@ class TicketListPresenter: NSObject, TicketListEventHandler {
     
     // MARK: - Properties
     var interactor: TicketListInteractor
-    var view: TicketListView
+    weak var view: TicketListView?
     private let mapper = TicketMapper()
     
     // MARK: - Lifecycle
@@ -28,16 +28,16 @@ class TicketListPresenter: NSObject, TicketListEventHandler {
     
     // MARK: - Private Helpers
     func processTickets() {
-        self.view.displayLoading()
+        self.view?.displayLoading()
         self.interactor.fetchTickets { [weak self] (tickets: [Ticket]?, error: Error?) in
-            self?.view.dismissLoading()
+            self?.view?.dismissLoading()
             
             if error == nil && tickets != nil {
                 let tickets = self?.mapper.ticketViewModelArray(models: tickets!)
-                self?.view.displayTickets(tickets)
+                self?.view?.displayTickets(tickets)
             }
             else if error != nil {
-                self?.view.displayError(error: error!)
+                self?.view?.displayError(error: error!)
             }
         }
     }

@@ -12,7 +12,7 @@ class TicketListTableViewController: UITableViewController, TicketListView {
     // MARK: - Properties
     var eventHandler: TicketListEventHandler!
     
-    var tickets: [TicketViewModel]!
+    var tickets: [TicketViewModel]?
     
     private lazy var alertController = TicketListTableViewController.buildErrorAlertController()
     
@@ -25,19 +25,32 @@ class TicketListTableViewController: UITableViewController, TicketListView {
         self.eventHandler.viewIsReady()
     }
 
-    // MARK: - Table view data source
+    // MARK: - „UITableViewDataSource>
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.tickets.count
+        if let tickets = self.tickets {
+            return tickets.count
+        }
+        return 0
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let reuseIdentifier = String(describing: TicketCell.self)
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! TicketCell
 
-        cell.updateContent(ticketViewModel: self.tickets[indexPath.row])
+        cell.updateContent(ticketViewModel: (self.tickets?[indexPath.row])!)
 
         return cell
+    }
+    
+    // MARK: - <UITableViewDelegate>
+    
+    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
     }
  
     
