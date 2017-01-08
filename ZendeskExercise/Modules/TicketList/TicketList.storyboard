@@ -54,7 +54,7 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="rQA-Rj-uXt" firstAttribute="leading" secondItem="HGF-bf-LYY" secondAttribute="leading" constant="8" id="39k-9j-ndA"/>
-                                        <constraint firstItem="rQA-Rj-uXt" firstAttribute="centerY" secondItem="Mxf-aV-wet" secondAttribute="centerY" id="4aN-GV-j9G"/>
+                                        <constraint firstItem="rQA-Rj-uXt" firstAttribute="bottom" secondItem="Mxf-aV-wet" secondAttribute="bottom" id="4aN-GV-j9G"/>
                                         <constraint firstItem="eMn-PS-6rL" firstAttribute="leading" secondItem="HGF-bf-LYY" secondAttribute="leading" constant="8" id="5Eu-1Y-kEe"/>
                                         <constraint firstItem="rQA-Rj-uXt" firstAttribute="top" secondItem="vLW-ip-TlQ" secondAttribute="bottom" constant="10" id="A6M-hB-tl0"/>
                                         <constraint firstItem="vLW-ip-TlQ" firstAttribute="top" secondItem="HGF-bf-LYY" secondAttribute="top" id="Lzk-s9-KOQ"/>
@@ -85,7 +85,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pwx-zN-ZZi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1140" y="-45"/>
+            <point key="canvasLocation" x="-1265" y="-63"/>
         </scene>
     </scenes>
 </document>

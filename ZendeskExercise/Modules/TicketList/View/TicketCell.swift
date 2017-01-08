@@ -19,7 +19,7 @@ class TicketCell: UITableViewCell {
         super.awakeFromNib()
         
         statusLabel.font = UIFont.systemFont(ofSize: 20.0)
-        idLabel.font = UIFont.systemFont(ofSize: 25.0)
+        idLabel.font = UIFont.systemFont(ofSize: 32.0)
         idLabel.textColor = UIColor.black
         subjectLabel.font = UIFont.systemFont(ofSize: 15.0)
         subjectLabel.textColor = UIColor.darkText
