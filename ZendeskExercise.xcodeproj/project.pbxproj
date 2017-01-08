@@ -57,6 +57,8 @@
 		ECB2082E1E2107D700BEEFD0 /* TicketDefaultService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB2082B1E2107D700BEEFD0 /* TicketDefaultService.swift */; };
 		ECB2082F1E2107D700BEEFD0 /* TicketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB2082C1E2107D700BEEFD0 /* TicketService.swift */; };
 		ECB208301E2107D700BEEFD0 /* TicketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB2082C1E2107D700BEEFD0 /* TicketService.swift */; };
+		ECB414601E226DA400876085 /* Common.strings in Resources */ = {isa = PBXBuildFile; fileRef = ECB4145D1E226DA400876085 /* Common.strings */; };
+		ECB414611E226DA400876085 /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB4145F1E226DA400876085 /* Localization.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +125,8 @@
 		ECB135781E2252210062AC33 /* ZendeskExercise-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ZendeskExercise-Bridging-Header.h"; sourceTree = "<group>"; };
 		ECB2082B1E2107D700BEEFD0 /* TicketDefaultService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketDefaultService.swift; sourceTree = "<group>"; };
 		ECB2082C1E2107D700BEEFD0 /* TicketService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketService.swift; sourceTree = "<group>"; };
+		ECB4145E1E226DA400876085 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Common.strings; sourceTree = "<group>"; };
+		ECB4145F1E226DA400876085 /* Localization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -296,6 +300,7 @@
 		EC7162011E211147001BCD06 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				ECB4145C1E226DA400876085 /* Localization */,
 				ECB135761E2250C60062AC33 /* Images.xcassets */,
 				EC7162021E211147001BCD06 /* EndPointFactory.swift */,
 				EC7162031E211147001BCD06 /* EndPoints.plist */,
@@ -364,6 +369,15 @@
 				ECB2082B1E2107D700BEEFD0 /* TicketDefaultService.swift */,
 			);
 			path = Ticket;
+			sourceTree = "<group>";
+		};
+		ECB4145C1E226DA400876085 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				ECB4145D1E226DA400876085 /* Common.strings */,
+				ECB4145F1E226DA400876085 /* Localization.swift */,
+			);
+			path = Localization;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -453,6 +467,7 @@
 				ECB135751E224FBC0062AC33 /* ZendeskExercise-Info.plist in Resources */,
 				EC7162051E211147001BCD06 /* EndPoints.plist in Resources */,
 				ECB135731E224E440062AC33 /* LaunchScreen.storyboard in Resources */,
+				ECB414601E226DA400876085 /* Common.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,6 +501,7 @@
 				EC469B121E21546A00195B51 /* TicketListPresenter.swift in Sources */,
 				EC469B001E214F1000195B51 /* TicketListInteractor.swift in Sources */,
 				EC469B101E21546A00195B51 /* TicketListEventHandler.swift in Sources */,
+				ECB414611E226DA400876085 /* Localization.swift in Sources */,
 				8327016F19B60AF700AF50E7 /* CLP_TicketTableViewController.m in Sources */,
 				EC469B1A1E2155F800195B51 /* TicketListModuleBuilder.swift in Sources */,
 				EC469B211E21590000195B51 /* TicketViewModel.swift in Sources */,
@@ -530,6 +546,14 @@
 				8327015E19B607D500AF50E7 /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		ECB4145D1E226DA400876085 /* Common.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ECB4145E1E226DA400876085 /* en */,
+			);
+			name = Common.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
