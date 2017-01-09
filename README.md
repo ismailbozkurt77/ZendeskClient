@@ -9,6 +9,7 @@ Zendesk client app to monitor service tickets
 - iOS 10.0
 - Xcode 8.1
 - Swift 3
+- Carthage 0.18.1
 
 ## Frameworks
 
